@@ -34,8 +34,9 @@ const Signup = (props) => {
     return (
         <div className="container mt-3">
             <h2 className="my-3">Create an account to use eNotebook</h2>
+            <h7 className="my-3">Already have an account? Login</h7>
             <form onSubmit={handleSubmit}>
-            <div className="mb-3">
+            <div className="mb-3 my-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name="name" onChange={onChange} aria-describedby="emailHelp"/>
                 </div>

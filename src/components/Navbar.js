@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react'
 import{ Link, useLocation, useNavigate } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     let history = useNavigate();
     const handleLogout = ()=>{
         localStorage.removeItem('token')
@@ -18,7 +18,7 @@ const Navbar = () => {
     }, [location]);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} navbar bg-${props.mode}`}>
         <div className="container-fluid">
             <Link className="navbar-brand" to="/">eNotebook</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +33,10 @@ const Navbar = () => {
                 <Link className="nav-link" to="/about">About</Link>
                 </li>
             </ul>
+            <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+                <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+            </div>
             {!localStorage.getItem('token')? <form className="d-flex" role="search">
                 <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
                 <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>

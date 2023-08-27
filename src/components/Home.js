@@ -3,7 +3,7 @@ const Home = (props) => {
   const { showAlert } = props;
   return (
     <div>
-      <Notes showAlert={showAlert} />
+      <Notes showAlert={showAlert} mode={props.mode}/>
     </div>
   );
 };

@@ -7,5 +7,5 @@ eNotebook is a free tool that allows you to store all your notes online. You can
 ![image](https://github.com/vaibhavj-11/enotebook-mern/assets/71918594/2e74738e-9adb-4e78-8b8f-faf49ef43707)
 ## About Us page:
 ![image](https://github.com/vaibhavj-11/enotebook-mern/assets/71918594/4a6e73de-7c07-4e67-a855-c81ec6c3096f)
-
-
+## Home Page/Add a Note:
+![image](https://github.com/vaibhavj-11/enotebook-mern/assets/71918594/1941d1f3-ac4b-4887-8b67-b6f708a3daae)
